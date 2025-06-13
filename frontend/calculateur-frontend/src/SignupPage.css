@@ -1,0 +1,68 @@
+/* SignupPage.css */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #A17284;
+}
+
+.signup-card {
+  display: flex;
+  width: 1000px;
+  height: 600px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: aliceblue;
+}
+
+.card-left {
+  flex: 1;
+}
+
+.card-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.styled-input input {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.styled-input input:focus {
+  border-color: #ff6219;
+  box-shadow: 0px 0px 5px rgba(255, 98, 25, 0.5);
+}
+
+.styled-button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+  width: 120%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px;
+  height: 35px;
+}
+
+.styled-button:hover {
+  background-color: #e55516;
+  box-shadow: 0px 4px 10px rgba(255, 98, 25, 0.4);
+  transform: translateY(-2px);
+}

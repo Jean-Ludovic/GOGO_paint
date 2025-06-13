@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LiquidBar from './LiquidBar';
+import './SurfaceCalculator.css';
 
 function SurfaceCalculator() {
   const [length, setLength] = useState('');
@@ -117,31 +118,34 @@ function SurfaceCalculator() {
     <div>
       <h2>Calculateur de surface – Magasin de peinture</h2>
 
-      <div>
-        <label>Unité : </label>
-        <select value={unit} onChange={(e) => setUnit(e.target.value)}>
-          <option value="feet">Pieds</option>
-          <option value="inches">Pouces</option>
-          <option value="meters">Mètres</option>
-        </select>
-      </div>
+<div className="form-container">
+  <div className="form-row">
+    <label>Unité :</label>
+    <select value={unit} onChange={(e) => setUnit(e.target.value)}>
+      <option value="feet">Pieds</option>
+      <option value="inches">Pouces</option>
+      <option value="meters">Mètres</option>
+    </select>
+  </div>
 
-      <div>
-        <label>Longueur :</label>
-        <input type="number" value={length} onChange={(e) => setLength(e.target.value)} />
-      </div>
+  <div className="form-row">
+    <label>Longueur :</label>
+    <input type="number" value={length} onChange={(e) => setLength(e.target.value)} />
+  </div>
 
-      <div>
-        <label>Hauteur :</label>
-        <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} />
-      </div>
+  <div className="form-row">
+    <label>Hauteur :</label>
+    <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} />
+  </div>
 
-      <div>
-        <label>OU Superficie directe (pi²) :</label>
-        <input type="number" value={area} onChange={(e) => setArea(e.target.value)} />
-      </div>
+  <div className="form-row">
+    <label>Superficie directe (pi²) :</label>
+    <input type="number" value={area} onChange={(e) => setArea(e.target.value)} />
+  </div>
 
-      <button onClick={calculate}>Calculer</button>
+  <button className="calculate-btn" onClick={calculate}>Calculer</button>
+</div>
+
 
       {result && (
         <div style={{ marginTop: '1rem' }}>
